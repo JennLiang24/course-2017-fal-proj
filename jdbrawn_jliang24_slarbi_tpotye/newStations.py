@@ -11,13 +11,11 @@ class newStations(dml.Algorithm):
     reads = ['jdbrawn_jliang24_slarbi_tpotye.safetyScore', 'jdbrawn_jliang24_slarbi_tpotye.colleges']
     writes = ['jdbrawn_jliang24_slarbi_tpotye.newStations']
 
-    def __init__(self, means):
-        self.means = means
+
 
     @staticmethod
     def execute(self, trial=False):
-        # mytest = newStations()
-        NUM_CLUSTERS = self.means
+        NUM_CLUSTERS = 3
 
         startTime = datetime.datetime.now()
         client = dml.pymongo.MongoClient()
